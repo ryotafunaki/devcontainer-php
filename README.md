@@ -1,15 +1,15 @@
-# Dev Containers Template Repository
+# PHP Dev Container Repository
 
-This repository is a template for Dev Containers.
+This repository is a Dev Container for PHP.
 
 ## Overview
 
 | Type | Summary |
 | --- | --- |
-| Base image and tags | base image name |
+| Base image and tags | php:*tag* |
 | Target platform | linux/x64, linux/arm64 |
-| Container registry's URL | https://hub.docker.com/r/owner/repository/ |
-| Installed packages | package name |
+| Container registry's URL | https://hub.docker.com/r/ryotafunaki/devcontainer-php/ |
+| Installed packages | .NET SDK 8.0, Kiota |
 
 ## How to use
 
