@@ -4,7 +4,7 @@ FROM php:8-bookworm
 
 # Install dependencies
 RUN apt update && \
-    apt install -y sudo gnupg2 wget
+    apt install -y sudo gnupg2 wget git
 
 # Create a non-root user
 ARG USER_NAME=developer
