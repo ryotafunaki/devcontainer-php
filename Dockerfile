@@ -4,7 +4,7 @@ FROM php:lastest
 
 # Install dependencies
 RUN apt update && \
-    apt install -y sudo gnupg2
+    apt install -y sudo gnupg2 wget
 
 # Create a non-root user
 ARG USER_NAME=developer
