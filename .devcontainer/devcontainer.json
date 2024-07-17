@@ -2,7 +2,10 @@
 // This source code is managed under the MIT license. See LICENSE in the project root.
 {
   "name": "PHP Dev Container",
-  "image": "ryotafunaki/devcontainer-php:sdk-8",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
   "customizations": {
     "vscode": {
       "extensions": [
