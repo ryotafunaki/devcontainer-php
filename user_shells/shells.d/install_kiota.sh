@@ -12,3 +12,4 @@ fi
 # Install development tools
 # See https://learn.microsoft.com/en-us/openapi/kiota/install?tabs=bash#install-as-net-tool
 dotnet tool install --global Microsoft.OpenApi.Kiota
+exit 0

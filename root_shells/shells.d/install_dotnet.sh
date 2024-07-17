@@ -19,3 +19,4 @@ rm $PACKAGE_FILE
 # Install the .NET SDK
 apt update
 apt install -y dotnet-sdk-8.0
+exit 0
