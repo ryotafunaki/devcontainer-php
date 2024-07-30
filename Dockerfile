@@ -11,10 +11,6 @@ ARG USER_NAME=developer
 RUN useradd -m ${USER_NAME} -s /bin/bash
 RUN echo "$USER_NAME ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/${USER_NAME}
 
-# Clean up
-RUN apt clean && \
-    rm -rf /var/lib/apt/lists/*
-
 # Install development tools for root
 COPY ./root_shells/ ./shells/
 RUN cd ./shells && \
@@ -34,3 +30,14 @@ RUN cd ./shells && \
     ./install.sh && \
     cd ..
 RUN rm -rf ./shells
+
+USER root
+
+# Clean up
+RUN apt clean && \
+    rm -rf /var/lib/apt/lists/*
+RUN rm -rf /tmp/* && \
+    rm -rf /var/tmp/*
+
+USER ${USER_NAME}
+WORKDIR /home/${USER_NAME}
