@@ -3,7 +3,7 @@
 # This source code is managed under the MIT license. See LICENSE in the project root.
 
 # Execute all scripts in the shells.d directory
-TARGET_FILES=$(find shells.d -type f -name "*.sh" | sort)
+TARGET_FILES=$(find ./shells.d -type f -name "*.sh" | sort)
 for file in $TARGET_FILES; do
     bash "$file"
     if [ $? -ne 0 ]; then
