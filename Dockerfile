@@ -4,7 +4,7 @@ FROM php:latest
 
 # Install dependencies
 RUN apt update && \
-    apt install -y sudo git gnupg2 vim curl lsb-release locales
+    apt install -y sudo git gnupg2 vim curl lsb-release locales wget
 
 # Install development tools for root
 ARG USER_NAME=developer
